@@ -7,3 +7,7 @@ tr, td , th, table {
 th [colspan="5"] {
     text-align:center;
 }
+
+#Bordure {
+    border-collapse: collapse;
+}
