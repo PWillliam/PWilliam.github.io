@@ -47,6 +47,21 @@ function horloge() {
     
 } 
 
-setInterval(horloge, 2000)
-// je voudrait avoir un compte a reboursqui commence à 50
+//setInterval(horloge, 2000)
 
+// je voudrait avoir un compte a reboursqui commence à 50
+// Array = Tableau
+// Type de variable qui est elle même un tableau 
+var tab = [10, "bonjour", 7.5, null]
+// cette variable est un tableau qui conient 4 valeurs dans l'ordre 
+//10
+//"bonjour"
+// 7.5
+// null
+ console.log (tab[1]) // on affiche la valeurqui ce trouve à la position 1 ui est "bonjour"
+ console.log (tab[3])
+ // on affiche la valeur qui ce trouve à la position 3 qui est null
+ //Je voudrait un tableau qui ce nomme Chmilblik qui comporte
+ // 5 valeur de type string et 5 de valaur de type int ou float 
+  var Chmilblik = ["courir", "sauter", "liberté", "jeter", "partir",12,34,78,99,65 ]
+  console.log (Chmilblik)
