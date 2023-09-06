@@ -65,3 +65,12 @@ var tab = [10, "bonjour", 7.5, null]
  // 5 valeur de type string et 5 de valaur de type int ou float 
   var Chmilblik = ["courir", "sauter", "liberté", "jeter", "partir",12,34,78,99,65 ]
   console.log (Chmilblik)
+  console.log (Chmilblik.length)
+
+  //document.getElementById('animal').innerHTML = "autruche"
+  let animal = "Autruche"
+  let temp = ""  
+  document.getElementById('animal').addEventListener('click', function() {
+  temp = document.getElementById('animal').innerHTML 
+  document.getElementById('animal').innerHTML = animal
+  animal = temp })
