@@ -20,10 +20,13 @@ let Allumer = true
 var Ventilo = null// j'ai créer une variable avec le nom Ventilo 
 // A vec comme valeur null qui est rien du tout
 // le type est null
+
 let Phrase = "j'aime l' " + Autruche + "mais pas les " + Perche
+
 // J'aime l'Animal mais pas les poisson
 // J'ai concaténer les chaines de caractères
 // et les variables
+
 var calcul = heure + NombreStagiaire // / * - %
 // 14.31 + 10
 
@@ -74,3 +77,48 @@ var tab = [10, "bonjour", 7.5, null]
   temp = document.getElementById('animal').innerHTML 
   document.getElementById('animal').innerHTML = animal
   animal = temp })
+
+  while(false) {} // Tandis que ce qu'il ce trouve dans les parentheses 
+  // est vrai elle tourne
+
+  for(var i=1; i <= 10; i++) {
+  // je défini un vraiable i qui sincrémenter de 1 tout les tours de 
+  // la boucle grace à i++
+  //et je lui demande de tourner jusqu'à ce que i soit supérieur à 10
+  console.log(i)
+  }
+  // la boucle tourne jusqu'à la taille du tableau 
+  for(var i=0; i < Chmilblik.length; i++) {
+    console.log(Chmilblik[i])
+    if (i == 3){
+      break
+    }
+  }
+  do{
+      console.log('Bonjour')
+     // Elle s'éxecute une fois même si la condition est fausse 
+     // Et elle continue si de s'éxecuter si la condition est vrai
+  } while (false);
+for (index in Chmilblik) {
+  console.log(index)
+}
+
+// Tableau Associatif 
+var tab_assoc = {"ami":"Chien", "cafe":"caféine" } 
+for (index in tab_assoc) {
+  console.log(index)
+}
+
+  for(var i=10; i >= 0; i--) {
+   // console.log("Il reste " + i + "lignes à écrire")
+  }
+  // console.log("il reste ", i, "lignes à écrire")
+  console.log(`Il reste ${i} ligne${i <= 1 ? '' : 's'} à écrire`)
+  // ${i <= 1 ? '' : 's'} = condition ternaire sois si i=1 alord (?) je change rien sinon(:) je met S
+  // i <= 1 ? '' : 's' 
+  //Reviens à faire 
+  //if (i <= 1) { // Si vrai
+ //console.log('')
+// } else { // Sinon faux
+// console.log ('s')
+//}
