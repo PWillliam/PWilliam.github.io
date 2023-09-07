@@ -118,9 +118,12 @@ ls th et td ont le même rôle ajouté des colonnes sur ma ligne sauf que le th 
     </table>
     <br><br><br>
     <p id="animal">animal</p>
+    <br><br>
     
     <form action="">
-    <label for="name">Nom : </label> 
+    <fieldset>
+        <legend>Mon beau formulaire</legend>
+        <label for="name">Nom : </label> 
     <input type="text" name="name" id="name">
 <br><br>
 <label for="prenom">prénom : </label>
@@ -129,23 +132,100 @@ ls th et td ont le même rôle ajouté des colonnes sur ma ligne sauf que le th 
 <label for="age">Age : </label>
 <input type="number" name="age" id="age">
 <br><br>
-
-<input type="radio" name="sexe" id="masculin">
-<label for="masculin">Masculin</label>
+<label for="E-mail">E-mail : </label>
+<input type="text" name="E-mail" id="">
 <br><br>
-<input type="radio" name="sexe" id="feminin">
-<label for="feminin">Feminin</label>
+    <input type="radio" name="sexe" id="masculin" checked>
+    <label for="masculin">Masculin</label>
 <br><br>
-<input type="radio" name="sexe" id="autruche">
-<label for="autruche">Autruche</label>
+    <input type="radio" name="sexe" id="feminin">
+    <label for="feminin">Feminin</label>
+<br><br>
+    <input type="radio" name="sexe" id="autruche">
+    <label for="autruche">Autruche</label>
+<br><br>
 <input type="checkbox" name="me" id="me">
+    <label for="me">je suis moi ?</label>
 <br><br>
-<label for="me">je suis moi ?</label>
+    <textarea name="message" placeholder="je veux un message" id="message" cols="30"rows="10"></textarea>
 <br><br>
-<input type="submit" value="envoyer !">
-
+    <input type="submit" value="envoyer !">
+</form>
+<form action="">
+    <h1>HTML form</h1>
+ <br><br>
+    <label for="firstname">firstname : </label>
+    <input type="text" name="firstname" id="name" placeholder="" votre nom>
+    <br><br>
+    <label for="lastname">lastname : </label>
+    <input type="text" name="lastname" id="lastname" placeholder="votre nom de famille">
+ <br><br>
+    <label for="E-mail">E-mail : </label>
+    <input type="E-mail" name="E-mail" id="mail" placeholder="abcd@exemple.com">
+ <br><br>
+    <input type="radio" name="sexe" id="sexe">
+    <label for="male">Male</label>
+ <br><br>
+    <input type="radio" name="sexe" id="sexe">
+    <label for="female">Female</label>
+ <br><br>
+    <input type="submit" value="Submit" class="button">
+    <input type="reset" value="Reset" class="button">
+    </fieldset>
+</form>
+<br><br><br>
+    <form action=""> 
+    <fieldset>
+    
+        <legend>Selection options liste</legend>
+    
+    <label for="checkbox">checkbox:</label>
+    <input type="checkbox" name="checkbox" id="checkbox">
+  <br>  
+    <label for="RadioButton1">RadioButton1:</label>
+    <input type="Radio" name="checkbox" id="RadioButton1">
+  <br>  
+    <label for="RadioButton2">RadioButton2:</label>
+    <input type="Radio" name="checkbox" id="RadioButton2" checked>
+    </fieldset>
 
 </form>
+    <form action="">
+    <fieldset>
+    <legend>Imput text</legend>
+    <label for="Login">Login Id:</label>
+    <input type="text" name="Login Id" id="Login">
+    <br>
+    <label for="Password">Password:</label>
+    <input type="password" name="Password" id="Password">
+
+</fieldset>
+</form>
+
+<form action="">
+<fieldset>
+<legend>Employee Designation</legend>
+<br>   <input type="checkbox" id="software" checked>
+       <label for="software">software Engineer </label>
+       <br><br>
+       <input type="checkbox" id="Data">
+       <label for="Data">Data Analyst </label>
+<br><br>
+       <input type="checkbox" id="Web">
+       <label for="Web">Web Developer </label>
+<br><br>
+       <input type="checkbox" id="Senior">
+       <label for="Senior">Senior Analyst </label>
+
+
+
+
+</fieldset>
+</form>
+<br>
+       <input type="submit" value="press" class="button">
+       <input type="reset" value="Reset" class="button">
+
 <script src="./script.js"></script>
 
 

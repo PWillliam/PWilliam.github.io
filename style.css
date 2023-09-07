@@ -25,3 +25,15 @@ tr:nth-child(3) {
 #animal:hover {
     cursor: pointer;
 }
+input[type="submit"], input
+
+
+
+.button{
+    transition: .3;
+    border: 20%;
+}
+
+fieldset {
+    width: 20%;
+}
