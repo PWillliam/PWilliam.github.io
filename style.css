@@ -82,3 +82,35 @@ img:hover {
    /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYw9d3YKv4kYUYQflYHkTyxTzVWt0FTLMRgA&usqp=CAU.peg);
 background-size: 1px;
 }*/
+.test{
+    font-size: 2em;
+    color: purple;
+}
+
+.conteneur {
+    background-color: black;
+    height: 200px;
+    width: 100%; /* Prend toute la largeur de la page */
+    display: flex; /* L'affiche ce met en mode flex*/
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+}
+.rouge {
+    background-color: red;
+    width: 10%;
+    height: 100px;
+}
+
+.vert {
+    background-color: green;
+    width: 10%;
+    height: 100px;
+}
+
+.orange {
+    background-color: orange;
+    width: 10%;
+    height: 100px;
+}
