@@ -1,3 +1,13 @@
+
+@font-face{
+    font-family: BebasNeue;
+    src: url(./BebasNeue-Regular.ttf)
+}
+
+font-face{
+    font-family: BebasNeue;
+    src: url(./fonts/Nablas-regular-variable)
+}
 tr, td , th, table {
     border: 1px solid rgb(47, 184, 29);
     border-radius: 15px;
@@ -127,7 +137,7 @@ background-size: 1px;
 
 .grand {
 background-color: darkgray;
-width: 75%;
+width: 50%;
 height: 400px;
 display: flex;
 justify-content: space-around;
@@ -163,3 +173,142 @@ align-items: center;
     height: 30%;
     background-color: aquamarine;
 }
+
+.violet{
+    background-color: violet;
+
+}
+.orang{
+    background-color: orange;
+}
+.bleu{
+    background-color: blue;
+}
+
+.red{
+    background-color: red;
+}
+
+.flexbox{
+    width: 70%;
+    height: 600px;
+    background-color: blueviolet;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.cote_gauche{
+    /*background-color: aqua;*/
+    width: 40%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cote_droite{
+    /*background-color: aqua;*/
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+.long{
+    width: 100%;
+    height: 20%;
+}
+.cote_gauche .gauche {
+    /*background-color: beige;*/
+    width: 50%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cote_gauche .droite {
+    width: 45%;
+    height: 75%;
+}
+.cote_gauche .gauche .petite {
+    width: 100%;
+    height: 60%;
+}
+.cote_gauche .gauche .trespetite{
+    width: 100%;
+    height: 30%;
+}
+
+.cote_droite .gauche {
+    /*background-color: beige;*/
+    width: 45%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cote_droite .droite{
+    /*background-color: beige;*/
+    width: 45%;
+    height: 65%;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+/*background-color: beige;*/
+}
+
+.cote_droite .gauche .petite1{
+    width: 100%;
+    height: 35%;
+}
+
+.cote_droite .gauche .petite2{
+    width: 100%;
+    height: 20%;
+}
+.cote_droite .gauche .petite3{
+    width: 100%;
+    height: 35%;
+}
+.cote_droite .droite .petite1{
+    width: 100%;
+    height: 40%;
+}
+
+.cote_droite .droite .petite2{
+    width: 100%;
+    height: 30%;
+}
+.cote_droite .droite .petite3{
+    width: 100%;
+    height: 25%;
+}   
+.cote_droite.long{
+    height: 30%;
+}
+    
+.flexbox h1 {
+    display: block;
+    margin: 2px;
+    font-size: 8em;
+    color: white;
+    font-weight: bolder;
+    font-family:BebasNeue;
+    
+    
+}
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
