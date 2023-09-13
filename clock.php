@@ -1,109 +1,78 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
+  <!DOCTYPE html>
+  <html lang="fr">
+  <head>
     <meta charset="UTF-8">
     
-    <title>Horloge</title>
-</head>
-<body>
-<!--Faite une horloge sois numérique sois analogique 
-on doit pouvoir changer l'heure avec un formulaire-->
+  </head>
+  <body>
+  <p id="minuteur">00.00.00</p>
+  <form action="" method="post">
+  
+        <label for="heure">heures(s)</label>
+        <input type="number" name="heure" id="heure" value=0 min=0 max=23 lenght=2>
 
-<?php
-/*---------------------------------------------------------------*/
-/*
-    Titre : Affiche l'heure en temps réel sur son site                                                                   
-                                                                                                                          
-    URL   : https://phpsources.net/code_s.php?id=136
-    Date édition     : 31 Juil 2005                                                                                       
-    Date mise à jour : 06 Sept 2019                                                                                      
-    Rapport de la maj:                                                                                                    
-    - fonctionnement du code vérifié                                                                                    
-*/
-/*---------------------------------------------------------------*/?>
-    <!--  Code à placer dans la partie HEAD  -->
+        <label for="minute">Minute(s)</label>
+        <input type="number" name="minute" id="minute"value=0 min=0 max=59 lenght=2>
 
-    <head>
+        <label for="seconde">Seconde(s)</label>
+        <input type="number" name="seconde" id="seconde"value=0 min=0 max=59 lenght=2>
+        <input type="submit" value="Régler">
+  </form>
 
     <?php
-    // Récupère l'heure du serveur
-
-       $localtime = localtime();
-
-       $seconde =  $localtime[0];
-       $minute =  $localtime[1];
-       $heure =  $localtime[2];
-
-    ?>
-
-    <script>
-          
-          bcle=0;
-
-          function clock()
-          {
-            if (bcle == 0)
-            {
-              heure = <?php echo $heure ?>;
-              min = <?php echo $minute ?>;
-              sec = <?php echo $seconde ?>;
-            }
-            else
-            {
-              sec ++;
-              if (sec == 60)
-              {
-                sec=0;
-                min++;
-                if (min == 60)
-                {
-                  min=0;
-                  heure++;
-                };
-              };
-            };
-            txt="";
-            if(heure < 10)
-            {
-              txt += "0";
-            }
-            txt += heure+ ":";
-            if(min < 10)
-            {
-              txt += "0"
-            }
-            txt += min + ":";
-            if(sec < 10)
-            {
-              txt += "0"
-            }
-            txt += sec ;
-            timer = setTimeout("clock()",1000);
-            bcle ++;
-            document.clock.date.value = txt ;
+        echo '  <script>
+        var heure = ' . (! empty($_POST["heure"]) ? $_POST["heure"] : '0').'
+        var minute = ' . (! empty($_POST["minute"]) ? $_POST["minute"] : '0').'
+        var seconde = ' . (! empty($_POST["seconde"]) ? $_POST["seconde"] : '15').'
+        
+        setInterval(function() {
+        document.getElementById("minuteur").innerHTML= 
+        `${(heure < 10 ? "0" : "")+ heure}:
+        ${(minute < 10 ? "0" : "")+ minute}:
+        ${(seconde < 10 ? "0" : "")+ seconde} `
+              
+        if (seconde <= 0) return
+            seconde--
+              if (seconde == 0) {
+              if (minute > 0) {
+                seconde = 59
+                minute--
+                } else {
+              if (heure > 0) {
+                heure--
+                minute = 59
+                seconde = 59
+              }
+              }
+            
           }
-    </script>
+          
+          
+
+        }, 1000)
+        
+        
+      </script>
+      '
+        
+  ?>
+        
+  
+  
 
 
-    <style type="text/css">
-    form{
-        display:inline;
-    }
-    .style {border-width: 0;background-color:#005A7B;color: #F2f2f2;}
-    </style>
-
-    </head>
+    </body>
+    </html>
 
 
 
 
-    <!--  Charge la fonction dans le corps de la page  -->
-    <body onLoad="clock()">
 
-    <!--  Affiche l'heure  -->
-    <form name="clock" onSubmit="0">
-    <input type="text" name="date" size="5" readonly="true" class="style">
-    </form>
 
-</body>
-</html>
+
+
+
+
+
+
+

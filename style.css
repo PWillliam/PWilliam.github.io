@@ -295,12 +295,16 @@ align-items: center;
     font-size: 8em;
     color: white;
     font-weight: bolder;
-    font-family:BebasNeue;
+    font-family: BebasNeue;
     
     
 }
 
-    
+#minuteur {
+    font-size: 6em;
+    font-family: BebasNeue;
+    letter-spacing: 10px;
+}
     
     
     
