@@ -5,7 +5,7 @@
 }
 
 font-face{
-    font-family: BebasNeue;
+    font-family: Nablas;
     src: url(./fonts/Nablas-regular-variable)
 }
 tr, td , th, table {
@@ -35,10 +35,10 @@ tr:nth-child(3) {
 #animal:hover {
     cursor: pointer;
 }
-input[type="submit"], [value="submit"] input[type="reset"] {
+/*input[type="submit"], [value="submit"] input[type="reset"] {
     font-size: 1em;
     border-radius: 25%;
-}
+}*/
 
 input[type="reset"], [value="reset"] input[type="reset"] {
     font-size: 1em;
@@ -301,11 +301,17 @@ align-items: center;
 }
 
 #minuteur {
-    font-size: 6em;
+    font-size: 7em;
     font-family: BebasNeue;
-    letter-spacing: 10px;
+    letter-spacing: 122px;
+    text-align: center;
+    color: red;
+    background-color: black;
+    display: block;
+    margin: 5px;
 }
-    
+
+
     
     
     

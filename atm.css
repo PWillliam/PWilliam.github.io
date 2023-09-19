@@ -1,0 +1,72 @@
+@font-face{
+    font-family: Dancing;
+    src: url(DancingScript-VariableFont_wght.ttf)
+}
+
+.container{
+    width: 25%;
+    height: 300px;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: 4px solid black;
+}
+
+.chiffre{
+    width:25%;
+    height: 60px;
+border: 1px solid black;
+border-radius: 0px;
+margin: 15px 0 15px 0;
+}
+
+button {
+    width: 20%;
+    height: 40px;
+    border-style: none;
+    background-color: lightgrey;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px 5px 10px 5px;
+    padding-bottom: 10px;
+}
+
+.button{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button{
+    font-weight: bold;
+    font-size: 1.75em;
+}
+
+.Decliner{
+    width: 27%;
+    height: 40px;
+    font-size: 1.2em;
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-color: 40px;
+}
+
+.Effacer{
+    width: 27%;
+    height: 40px;
+    font-size: 1.2em;
+    text-decoration: underline;
+    text-decoration-color: yellow;
+    text-decoration-color: 40px;
+}
+
+.Entrez{
+    width: 27%;
+    height: 40px;
+    font-size: 1.2em;
+    text-decoration: underline;
+    text-decoration-color: green;
+    text-decoration-color: 40px;
+}
