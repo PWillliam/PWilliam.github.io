@@ -1,3 +1,6 @@
+<?php 
+require_once('./db.php');
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,9 +12,9 @@
     <section>
         <form action="" method="post">
             <span class="num" id="texte">
-                <span id=invisible></span>
-                    <input type="text" id='affiche' readonly>
-</span>
+            <input type="password" name="number" id=invisible readonly>
+                <input type="text" id='affiche' readonly>
+        </span>
             <div class="num">1</div>
             <div class="num">2</div>
             <div class="num">3</div>            
@@ -31,31 +34,54 @@
         </form>
 
     </section>
+    <?php 
+        if (isset($_POST) && !empty($_POST)) {
+            echo '<pre>'; var_dump($_POST); echo '</pre>';
+            $select = $bdd->prepare('SELECT code FROM atm WHERE code=?');
+            $select->execute(array(
+                $_POST['number']
+            ));
+            $select = $select->fetchAll();
+            if (count($select) > 0) 
+                echo '<script> alert("Le code est bon") </script>';
+            else 
+                echo "<script> alert('Le code n\'est pas bon') </script>";
 
+        }
+    ?>
+    
+    
+    
     <script>
-    var button = document.getElementsByClassName('num')
-
-for (let index = 0; index < button.length; index++) {
+                var button = document.getElementsByClassName('num')
+                
+    for (let index = 0; index < button.length; index++) {
     if (button[index].id.length > 0 || button[index].type == 'submit') continue
-    button[index].addEventListener('click', function() {
+            button[index].addEventListener('click', function() {
         var input = document.getElementById('affiche')
         var span = document.getElementById('invisible')
-        console.log(span.innerHTML)
         if (input.value.length == 4) {
             input.value = ""
+            span.value = ""
             return
         }
-        span.value += button[index].innerHTML
+        span.value  += button[index].innerHTML
                 input.value += '*'
     })
 }
     function Stop() {
             document.getElementById('affiche').value = ''
-            document.getElementById('invisible').innerHTML = ''
+            document.getElementById('invisible').value = ''
 }
-document.getElementById('reject').addEventListener('click', Stop)
+        document.getElementById('reject').addEventListener('click', Stop)
         document.getElementById('erase').addEventListener('click', Stop)
 
     </script>
+
+    <!-- 
+        Faite un formulaire qui va permettre d'inscrire de nouveau code 
+        dans la base de donnée vous devez mettre le nom de prénom 
+        Si le code est déja existant il n'y pas possible d'être intégrer                
+     -->
 </body>
 </html>

@@ -68,3 +68,6 @@ div.num:hover, button.num:hover{
 .green {
     background-color: green;
 }
+#invisible {
+    display: none;
+}
