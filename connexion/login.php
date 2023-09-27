@@ -1,6 +1,10 @@
 <?php
 session_start();
 if (!empty($_SESSION)) header('Location: index2.php');
+if (!empty($_SESSION)) header('Location: index.php');
+if (!empty($_GET)) {
+    if ($_GET['success'] == 'reset') echo '<script> alert("Votre mot de passe à été modifié") </script>';
+}
 
 require_once('./db.php')
 ?>
@@ -22,8 +26,8 @@ require_once('./db.php')
             <input type="submit" value="Se connecter">
             <a href="./inscription.php">Vous n'avez pas de compte ?</a>
             <a href="./forgotpassword.php">Mot de passe oublié ?</a>
-            <a href="./inscription.php">Vous n'avez pas de compte ?</a>
- 
+            
+
         </pre>
     </form>
     <?php 

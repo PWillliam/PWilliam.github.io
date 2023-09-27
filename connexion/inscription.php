@@ -40,7 +40,7 @@ require_once('./db.php')
     </form>
     <?php
     if (isset($_POST) && !empty($_POST)) {
-        $select = $bdd->prepare("SELECT * FROM users WHERE username=?");
+        $select = $bdd->prepare('SELECT * FROM users WHERE username=?');
         $select->execute(array($_POST['username'], $_POST['mail']));
         $select = $select->fetchAll();
         if (empty($select)) {

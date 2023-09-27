@@ -39,7 +39,7 @@ function GenerateToken($lenght){
         }
     }
     $msg= "lien pour réinitialiser votre mot de passe :http://localhost/cours_php/PWillliam.github.io/reset.php?id=$id&token=$token";
-    smtpmailer ($email, 'dwwm.auboue@hotmail.com', 'DWWM', "Réinitialiser votre mot depasse", $msg);
+    smtpmailer ($email, 'dwwm.auboue@hotmail.com', 'DWWM', "Réinitialisation du mot de passe", $msg);
 }
 
 ?>
