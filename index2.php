@@ -18,5 +18,23 @@ if (empty($_SESSION)) header('Location: login.php');
         Vous allez devoir créer trois page une de connexion, une d'inscription et un page d'accueil avec des 
         lien hypertext et si possible réussir à faire afficher le nom et prénom de la personne 
     -->
+    <?php
+    if (isset($_POST['logout'])) {
+
+        $_SESSION = array();
+
+        session_destroy();
+
+        header('Location: index2.php');
+        exit;
+    }
+?>
+        <form action="" method="post">
+            <input type="submit" name="logout" value="déconnexion">
+        
+    </form>
+
+    <a href="déconnexion.php">Se Déconnecter</a>
+
 </body>
 </html>

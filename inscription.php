@@ -35,13 +35,13 @@ require_once('./db.php')
             <br>
             <input type="submit" value="S'inscrire">
             <a href="./login.php">Vous n'avez pas de compte ?</a>
-   
+
         </pre>
     </form>
     <?php
     if (isset($_POST) && !empty($_POST)) {
         $select = $bdd->prepare("SELECT * FROM users WHERE username=?");
-        $select->execute(array($_POST['username']));
+        $select->execute(array($_POST['username'], $_POST['mail']));
         $select = $select->fetchAll();
         if (empty($select)) {
             echo 'Bonjour !';

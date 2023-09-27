@@ -1,4 +1,7 @@
 <?php
+session_start();
+if (!empty($_SESSION)) header('Location: index2.php');
+
 require_once('./db.php')
 ?>
 <!DOCTYPE html>
@@ -18,18 +21,21 @@ require_once('./db.php')
             <input type="password" name="password" id="password">
             <input type="submit" value="Se connecter">
             <a href="./inscription.php">Vous n'avez pas de compte ?</a>
+            <a href="./forgotpassword.php">Mot de passe oublié ?</a>
+            <a href="./inscription.php">Vous n'avez pas de compte ?</a>
+ 
         </pre>
     </form>
     <?php 
     if (isset($_POST) && !empty($_POST)) {
-        $select = $bdd->prepare('SELECT * FROM users WHERE username=? OR password=?');
+        $select = $bdd->prepare('SELECT * FROM users WHERE (username=:login OR mail=:login) AND password=:pass');
         $select->execute(array(
-            $_POST['username'],
-            sha1($_POST['password'])
+            'login' => $_POST['username'],
+            'pass' => sha1($_POST['password' ])
         ));
         $select = $select->fetch(PDO::FETCH_ASSOC);
         if (!empty($select)) {
-            session_start();
+            
             $_SESSION = $select;
             header('Location: index2.php');
         } else
