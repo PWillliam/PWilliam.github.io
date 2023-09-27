@@ -8,7 +8,7 @@ function GenerateToken($lenght){
     $token = "0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN";
     return substr(str_shuffle(str_repeat($token, $lenght)), 0, $lenght);
 }
-    function Sendemail($id, $token, $email) {
+    function Sendemail($id, $token, $email, $msg, $objet, $name) {
         function smtpmailer($to, $from,$from_name, $subject, $body) {
             $mail = new PHPMailer();
             $mail->isSMTP();
@@ -38,8 +38,8 @@ function GenerateToken($lenght){
 
         }
     }
-    $msg= "lien pour réinitialiser votre mot de passe :http://localhost/cours_php/PWillliam.github.io/reset.php?id=$id&token=$token";
-    smtpmailer ($email, 'dwwm.auboue@hotmail.com', 'DWWM', "Réinitialisation du mot de passe", $msg);
+    //$msg= "lien pour réinitialiser votre mot de passe :http://localhost/cours_php/PWillliam.github.io/reset.php?id=$id&token=$token";
+    smtpmailer ($email, 'dwwm.auboue@hotmail.com', $name, $objet, $msg);
 }
 
 ?>

@@ -39,10 +39,13 @@ require_once('./db.php')
         ));
         $select = $select->fetch(PDO::FETCH_ASSOC);
         if (!empty($select)) {
-            
+            if ($select['confirm']) {
             $_SESSION = $select;
             header('Location: index2.php');
         } else
+    
+    echo "<script> alert('Le l\'adresse mail n'est pas vérifier') </script>";
+    }else
         echo "<script> alert('Le mot de passe ou le pseudo n\'est pas bon') </script>";
 
     }
