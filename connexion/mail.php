@@ -8,7 +8,7 @@ function GenerateToken($lenght){
     $token = "0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN";
     return substr(str_shuffle(str_repeat($token, $lenght)), 0, $lenght);
 }
-    function Sendemail($id, $token, $email, $msg, $objet, $name) {
+    function Sendemail( $token, $email, $msg, $objet, $name) {
         function smtpmailer($to, $from,$from_name, $subject, $body) {
             $mail = new PHPMailer();
             $mail->isSMTP();

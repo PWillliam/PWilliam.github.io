@@ -36,7 +36,9 @@ require_once('./mail.php')
                 $_POST['email'],
                 $select[0]['id']
             ));
-            SendEmail($select['0'], GenerateToken(50), $_POST['mail'],);
+            $msg = "Lien pour réinitialiser votre mot de passe : http://localhost/cours_php/PWillliam.io/exo/connexion/reset.php?id=$select[0]['id']&token=$token";  
+            SendEmail($token, $_POST['email'], $msg, 'Réinitialisation du mot de passe', 'DWWM');
+
         }
     }
     ?>
