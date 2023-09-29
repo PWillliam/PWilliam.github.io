@@ -23,5 +23,18 @@ if (isset($_GET) && !empty($_GET)) {
         <input type="submit" value="Confirmer">
     </form>
 
+    <?php
+if (isset($_POST) && !empty($_POST)) {
+    $update = $bdd->prepare("UPDATE users SET token=NULL, confirm=1 WHERE token=?");
+    $update->execute(array(
+        $_GET['token']
+    ));
+    $update = $update->rowCount();
+    
+}
+
+    
+    ?>
+
 </body>
 </html>

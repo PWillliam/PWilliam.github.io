@@ -9,6 +9,8 @@ if (isset($_GET) && !empty($_GET)) {
     $select = $select->fetchAll();
     if (empty($select))
         header('Location: login.php');
+        elseif (!$select['confirm']) header('Location: login.php');
+
 } else 
     header('Location: login.php');
 
