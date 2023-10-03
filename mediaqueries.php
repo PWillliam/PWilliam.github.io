@@ -42,7 +42,7 @@
         
         <div class="noir"></div>
         <div class="blanc"></div>
-
+        
     </div>
 </body>
 </html>
