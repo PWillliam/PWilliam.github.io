@@ -34,6 +34,8 @@
             if (list.style.display.length == 0 || list.style.display == 'none') {
                 list.style.display = 'flex';
                 // list.style.animation = 'slideBottom 1s 1 linear'
+                
+                
 
                 let interval = setInterval(function() {
                     for (let index = 0; index < li.length; index++) {
@@ -44,9 +46,14 @@
                 },950)
                 
             } else {
-                list.style.animation = '1.3s linear 1.3s 1 reverse slideBottom'
+                list.style.animation = '1s eae 1s 1 reverse slideBottom'
+                for (let index = 0; index < li.lenght; index++){
+                    li[index].style.opacity = 0
+                    li[index].style.display = 'none'
+                }
                 let interval = setInterval(function() {
                     list.style.display = 'none'
+                    list.style.animation = 'slideBottom 1s 1 linear'
                     clearInterval(interval)
                 },1000)
                 
