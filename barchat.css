@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(60,100,165);
+    background-color: darkmagenta;
     margin: 0;
     padding: 0;
 }
@@ -7,15 +7,15 @@ body {
 nav {
     position: fixed;
     left: 0; right: 0; top: 0;
-    background-color: aliceblue;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 60px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid lightseagreen;
 }
 nav span {
-    color: gray;
+    color: lightseagreen;
     font-size: 1.7em;
     display: flex;
     align-items: center;
@@ -32,14 +32,14 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: lightseagreen;
     font-family: cursive;
 }
 nav ul button {
-    background-color:rgb(232, 0, 144);
+    background-color:black;
     padding: 15px;
-    color: white;
-    border: 1px solid gray;
+    color: lightseagreen;
+    border: 1px solid lightseagreen;
     border-radius: 10px;
 }
 
