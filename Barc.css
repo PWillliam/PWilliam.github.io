@@ -1,9 +1,13 @@
 body {
-    background-color:darkmagenta;
+    background-color:beige;
     margin: 0;
     padding: 0;
 }
 
+th[colspan="2"] {
+    width: 100px;
+    height: 100px;
+}
 nav {
     background-color: black;
     color: lightseagreen;

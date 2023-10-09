@@ -8,15 +8,18 @@
     <title>Name</title>
 </head>
 <body>
+    <table>
+<th colspan=2><img src="./img/chat.jpg" alt="chat"></th>
+    </table>                                                 
 <nav>
         <div>        
             <box-icon name='beer' color="lightseagreen" size="30px"></box-icon>
-            <span>Bar à chat</span>
+            <span>Barcat</span>
         </div>
         <ul>                 
-            <li>Modifier</li>
-            <li>Reservation</li>
-            <li>Liste</li>
+            
+            <li>CONTACT</li>
+            <li>S'IDENTIFIER</li>
         </ul> 
         <div> 
             <box-icon name='cat' type="solid" color="lightseagreen" size="30px"></box-icon>
