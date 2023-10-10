@@ -1,15 +1,25 @@
 <?php
-require_once('dbCat.php');
+require_once('../bar/dbCat.php');
+session_start();
+if (!empty($_SESSION)) {
+    session_start();
+    session_unset();
+    session_destroy();
+
+    header('Location: index3.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="bar.css"> 
+    <link rel="stylesheet" href="../bar/bar.css"> 
     <title>Connexion</title>
 </head>
 <body>
-    <?php include 'header.php'; ?>
+<?php 
+        $_GET['page'] = 'index';
+        include 'header.php'; ?>
     <br><br><br><br>
 
     <form method='post'>
@@ -33,7 +43,7 @@ require_once('dbCat.php');
         $select = $select->fetch(PDO::FETCH_ASSOC);
 
         if (empty($select) == false && password_verify($_POST['password'], $select['password'])) {
-            session_start();
+            
             $_SESSION = $select;
             header('Location: index3.php');
         } else {

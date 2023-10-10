@@ -5,7 +5,7 @@ require_once('dbCat.php');
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="bar.css">
+    <link rel="stylesheet" href="../bar/bar.css">
     <title>Inscription</title>
 </head>
 <body>
