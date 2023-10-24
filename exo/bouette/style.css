@@ -1,0 +1,12 @@
+.bouette {
+    height: 100px;
+    width: 100%;
+}
+
+.rouge {
+    background-color: red;
+}
+
+.arrondi {
+    border-radius: 15px;
+}

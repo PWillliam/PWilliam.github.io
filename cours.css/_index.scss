@@ -1,0 +1,15 @@
+$nuit: #000;
+$jour: #fff;
+
+body[theme="jour"] {
+    background-color: $jour;
+}
+body[theme="nuit"] {
+    background-color: $nuit;
+}
+
+div {
+    background-color: aqua;
+}
+// Créer une liste en SASS qui va s'appeler fruit et qui va contenir : 
+// banane, cerise, ananas, pomme

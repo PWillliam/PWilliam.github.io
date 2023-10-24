@@ -1,0 +1,11 @@
+body[theme=jour] {
+  background-color: #fff;
+}
+
+body[theme=nuit] {
+  background-color: #000;
+}
+
+div {
+  background-color: aqua;
+}/*# sourceMappingURL=main.css.map */
