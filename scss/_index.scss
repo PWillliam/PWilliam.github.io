@@ -1,14 +1,14 @@
 $nuit: #000;
 $jour: #fff;
 
-body[theme="jour"] {
+.body[theme="jour"] {
     background-color: $jour;
 }
-body[theme="nuit"] {
+.body[theme="nuit"] {
     background-color: $nuit;
 }
 
-div {
+.div {
     background-color: aqua;
 }
 // Créer une variable liste en SASS qui va s'appeler fruit et qui va contenir : 
@@ -59,7 +59,7 @@ $fruits: "banane", "cerise", "ananas", "pomme";
     @return nth($list, lenght($list));
 }
 $border: 1px solid black, 100px solid red, 1000px solid green;
-div {
+.div {
     border: firstOfList($border);
 };
 
@@ -169,7 +169,7 @@ $social: (facebook: #3b5998,flickr: #0063db,linkedin: #007bb6,twitter: #00aced,v
         }
     }
     
-    body {
+    .body {
         @include ToggleNight('dark');
         a {
             @include ToggleNight('light');

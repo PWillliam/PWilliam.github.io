@@ -1,0 +1,59 @@
+.personalPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2E1E28;
+  width: 100%;
+}
+.personalPage h1 {
+  font-size: 2.7em;
+  color: #95B7A5;
+}
+.personalPage h2 {
+  font-size: 2.2em;
+  color: #DDE9E2;
+}
+.personalPage button {
+  font-size: 1.6em;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 25px;
+  background-color: #785167;
+  border: none;
+  color: #DDE9E2;
+  text-decoration: underline;
+}
+.personalPage div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.personalPage div article {
+  margin-top: 55px;
+  padding: 25px;
+  font-size: 1.2em;
+  height: 750px;
+  background-color: #95B7A5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.personalPage div article button {
+  background-color: #DDE9E2;
+  color: black;
+}
+.personalPage div article p {
+  text-align: center;
+}
+.personalPage div .Triangle {
+  height: 0;
+  width: 0;
+  border-top: 140px solid transparent;
+  border-left: 3px solid #95B7A5;
+}
+.personalPage div .article {
+  width: 25%;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: baseline;
+}/*# sourceMappingURL=main.css.map */
