@@ -1,13 +1,23 @@
+<?php
+    require_once('./Controllers/read_ctrl.php')
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        th, td {
+            border: 1px solid black;
+            padding: 25px;
+        }
+    </style>
 </head>
 <body>
-    <!-- CRUD: CREATE, READ(SELECT), UPDATE, DELETE -->
-    <!-- Vous allez avoir plusieurs fichier 
+    <!-- CRUD: CREATE(INSERT INTO), READ(SELECT), UPDATE, DELETE
+
+    
+    Vous allez avoir plusieurs fichier 
     Dans un dossier 'Views' vous avez: create.php, read.php, update.php
     Dans un dossier 'Controllers' vous avez: create_ctrl.php, read_ctrl.php, update_ctrl.php, delete_ctrl.php 
 
@@ -23,35 +33,45 @@
     L'index.php affichera un tableau de user, chaque ligne de ce tableau affichera les informations 
     (id, pseudo, mot de passe hashé, description) de cet user et permettra aussi la suppression, 
     la modification et l'affichage d'un user via un bouton ou un lien
-    L'index.php affichera  aussu un bouton permettant la création d'un user
+    L'index.php affichera aussi un bouton permettant la création d'un user
     create.php affichera le formulaire de création d'user
     update.php affichera le formulaire prérempli d'user afin de la modifier
     read.php afficher une liste à puce des informations de l'user
 
-    
 -->
-<?php
-require('config.php');
+    <form action="Views/create.php" method="post">        
+        <button type="submit">Ajouter utilisateur</button>
+        <a href="Views/login.php">Connexion</a>
+        <br><br><br><br>
 
-$stmt = $conn->prepare("SELECT * FROM user");
-$stmt->execute();
-$users = $stmt->fetchAll();
+        <table>
+            <tr>
+                <th>ID :</th>
+                <th>Pseudo :</th>
+                <th>Mot de passe :</th>
+                <th>Description :</th>
+                <th>Actions :</th>
+            </tr>
+            <?php
+                foreach ($Tableau as $ligne) {
+                    echo '<tr>';
 
-echo "<table>";
-echo "<tr><th>ID</th><th>Pseudo</th><th>Description</th><th>Actions</th></tr>";
-foreach ($users as $user) {
-    echo "<tr>";
-    echo "<td>" . $user['id'] . "</td>";
-    echo "<td>" . $user['pseudo'] . "</td>";
-    echo "<td>" . $user['description'] . "</td>";
-    echo "<td><a href='read.php?id=" . $user['id'] . "'>Voir</a> | <a href='update.php?id=" . $user['id'] . "'>Modifier</a> | <a href='delete_ctrl.php?id=" . $user['id'] . "'>Supprimer</a></td>";
-    echo "</tr>";
-}
-echo "</table>";
+                    foreach ($ligne as $column) {
+                        echo "<td>$column</td>";
+                    }
+                    
+                    echo "<td> 
+                        <button name='modify' value='$ligne->id' formaction='Views/update.php'>Modifier</button> 
+                        <button name='delete' value='$ligne->id' formaction='Controllers/delete_ctrl.php'>Supprimer</button> 
+                    </td>";
 
-echo "<a href='create.php'>Créer un nouvel utilisateur</a>";
-?>
+                    echo '</tr>';
+                }
+            ?>
+        </table>
+    </form>
 
-    
+
+
 </body>
 </html>
